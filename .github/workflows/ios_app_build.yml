@@ -1,0 +1,20 @@
+name: iOS App Build
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run script
+        run: |
+          yarn -version
+          xcodebuild -version
+          fastlane -version
+          pod --version
