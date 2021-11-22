@@ -15,17 +15,17 @@ jobs:
         # with:
         #   ref: dev
 
-      - name: bundle install
-        run: cd ios && bundle install && cd ..
+      # - name: bundle install
+      #   run: cd ios && bundle install && cd ..
 
-      - name: packages install
-        run: yarn install
+      # - name: packages install
+      #   run: yarn install
 
-      - name: pods install
-        run: cd ios && pod install && cd ..
+      # - name: pods install
+      #   run: cd ios && pod install && cd ..
 
-      - name: execute fastlane
-        run: fastlane xxx
+      # - name: execute fastlane
+      #   run: fastlane xxx
 
   android:
     name: android app build
@@ -36,11 +36,11 @@ jobs:
         # with:
         #   ref: dev
 
-      - name: bundle install
-        run: cd android && bundle install && cd ..
+      # - name: bundle install
+      #   run: cd android && bundle install && cd ..
 
-      - name: packages install
-        run: yarn install
+      # - name: packages install
+      #   run: yarn install
 
-      - name: execute fastlane
-        run: fastlane xxx
+      # - name: execute fastlane
+      #   run: fastlane xxx
