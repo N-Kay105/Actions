@@ -1,20 +1,24 @@
 name: iOS App Build
 
 on:
-  push:
-    branches: [ main ]
+  # push:
+  #   branches: [ main ]
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: macos-11
     steps:
-      - uses: actions/checkout@v2
+      - name: checkout
+        uses: actions/checkout@v2
+        # with:
+        #   ref: dev
 
       # Runs a single command using the runners shell
-      - name: Run script
+      - name: run scripts
         run: |
           yarn -version
           xcodebuild -version
           fastlane -version
           pod --version
+          echo ${{secrets.HOGE}}
